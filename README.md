@@ -29,8 +29,18 @@ A client for Dynamic DNS system. Written in PHP.
  composer install
  ```
 
-5. Run the script
+5. Get the token
+ Go to https://cloud.digitalocean.com/settings/applications to generate a new token for your app.
 
- `php index.php`
+### Configuration
+
+- Open the `config.ini`, replace your token in the token section.
+- Change `time_zone` and `ip_api` as your favorite.
+- If `force_update` is set to `1`, the script will ignore IP from the logging file, and update the current IP from the API to Digital Ocean.
+- Every domain record is type `A`. Each domain record in one line. You must use array config type (eg. `domain.com[]`) if there are many records in one domain
+
+### Run the script
+
+`php index.php`
 
 You can install the cronjob for doing this job each 10 minutes or 1 hour...
