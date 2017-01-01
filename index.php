@@ -13,7 +13,7 @@ function main() {
     global $force_update, $ip_check, $ini_array;
     $force_update = false;
 
-    define("CONFIG_FILE", "config.ini");
+    define("CONFIG_FILE", __DIR__."/config.ini");
     if (!file_exists(CONFIG_FILE)) die("No config file");
 
     $ini_array = parse_ini_file(CONFIG_FILE, true);
