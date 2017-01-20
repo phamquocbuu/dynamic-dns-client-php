@@ -57,10 +57,10 @@ Example:
 
 I have a domain `phamquocbuu.name.vn`, its NS records as below:
 
- - ns1.digitalocean.com.
- - ns2.digitalocean.com.
- - ns3.digitalocean.com.
+- ns1.digitalocean.com.
+- ns2.digitalocean.com.
+- ns3.digitalocean.com.
+
+In Digital Ocean, I (use API) add a lot of CNAME, `workstation.phamquocbuu.name.vn`, `web.phamquocbuu.name.vn`, `blog.phamquocbuu.name.vn`,...
  
- In Digital Ocean, I (use API) add a lot of CNAME, `workstation.phamquocbuu.name.vn`, `web.phamquocbuu.name.vn`, `blog.phamquocbuu.name.vn`,...
- 
- I use my main domain `buu.vn`. Therefore I create a CNAME `blog.buu.vn` pointed to `blog.phamquocbuu.name.vn`, `ws.buu.vn` pointed to `workstation.phamquocbuu.name.vn`,...
+I use my main domain `buu.vn`. Therefore I create a CNAME `blog.buu.vn` pointed to `blog.phamquocbuu.name.vn`, `ws.buu.vn` pointed to `workstation.phamquocbuu.name.vn`,...
