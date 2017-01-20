@@ -7,7 +7,11 @@ A client for Dynamic DNS system. Written in PHP.
 
 1. Digital Ocean droplet
 2. A domain
-3. A computer/VPS
+3. A computer as a server
+
+
+> We use Digital Ocean as a DNS server, and use its API for updating the IP which the CNAME of your domain pointed to.
+
 
 ### Setup
 
@@ -44,3 +48,19 @@ A client for Dynamic DNS system. Written in PHP.
 `php index.php`
 
 You can install the cronjob for doing this job each 10 minutes or 1 hour...
+
+## Additional
+
+You can point NS of a domain to Digital Ocean. Then add as much subdomain (CNAME) (called XXX) as you want, each for a PC server. Then you can use another domain/subdomain, point it to the XXX domain.
+
+Example:
+
+I have a domain `phamquocbuu.name.vn`, its NS records as below:
+
+ - ns1.digitalocean.com.
+ - ns2.digitalocean.com.
+ - ns3.digitalocean.com.
+ 
+ In Digital Ocean, I (use API) add a lot of CNAME, `workstation.phamquocbuu.name.vn`, `web.phamquocbuu.name.vn`, `blog.phamquocbuu.name.vn`,...
+ 
+ I use my main domain `buu.vn`. Therefore I create a CNAME `blog.buu.vn` pointed to `blog.phamquocbuu.name.vn`, `ws.buu.vn` pointed to `workstation.phamquocbuu.name.vn`,...
