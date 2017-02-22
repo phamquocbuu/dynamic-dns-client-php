@@ -5,7 +5,7 @@ A client for Dynamic DNS system. Written in PHP.
 
 ### Requirements
 
-1. Digital Ocean droplet
+1. Digital Ocean account
 2. A domain
 3. A computer as a server
 
@@ -15,8 +15,8 @@ A client for Dynamic DNS system. Written in PHP.
 
 ### Setup
 
-1. Add your domain to Digital Ocean droplet.
-2. Remove any existing record in your domain. Add 3 NS records as below:
+1. Add your domain to Digital Ocean in `Networking` Section.
+2. Go to your domain provider, open control panel and remove any existing record. Add 3 NS records as below:
 
  - ns1.digitalocean.com.
  - ns2.digitalocean.com.
